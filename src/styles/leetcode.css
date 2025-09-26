@@ -1,0 +1,268 @@
+/* ==============================
+   LeetCode Section Styles
+   ============================== */
+
+/* Variables */
+:root {
+  --cell-size: 12px;
+  --cell-gap: 6px;
+}
+
+/* Container */
+.leet-code-container {
+  margin-top: 2rem;
+}
+
+/* Top row layout */
+.leetcode-top-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: stretch;
+}
+
+/* Generic card style */
+.leetcode-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  position: relative;
+  min-height: 160px;
+  color: var(--text);
+}
+
+/* ------------------------------
+   Donut Chart
+--------------------------------*/
+.donut-wrap {
+  width: 220px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donut-svg { display: block; }
+
+.donut-number {
+  font-size: 28px;
+  fill: var(--text);
+  font-weight: 700;
+}
+.donut-subtext {
+  font-size: 12px;
+  fill: var(--muted);
+}
+.donut-small {
+  font-size: 12px;
+  fill: var(--muted);
+}
+
+/* ------------------------------
+   Difficulty stacked boxes
+--------------------------------*/
+.difficulty-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: auto;
+  align-self: stretch;
+  justify-content: center;
+}
+.diff-box {
+  min-width: 120px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.3);
+}
+.diff-box .diff-title {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.diff-box .diff-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* color accents */
+.diff-box.easy { border-left: 4px solid #2DE0D3; }
+.diff-box.medium { border-left: 4px solid #ffd166; }
+.diff-box.hard { border-left: 4px solid #ff6b6b; }
+
+/* ------------------------------
+   Badges card
+--------------------------------*/
+.badges-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 320px;
+  position: relative;
+}
+.badges-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.badge-count {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+.badge-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.badge-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.badge-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+}
+.most-recent {
+  margin-top: 8px;
+  color: var(--muted);
+}
+.mr-name {
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+.card-arrow {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* ------------------------------
+   Heatmap card
+--------------------------------*/
+.heatmap-card {
+  margin-top: 1rem;
+  padding-bottom: 14px;
+  display: block;
+  flex-direction: column;
+}
+
+/* heatmap top */
+.heatmap-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.heatmap-title {
+  font-size: 16px;
+  color: var(--muted);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.heatmap-title .big-count {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+}
+.heat-stats {
+  color: var(--muted);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+/* heatmap body */
+.heatmap-body {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Weekday labels (vertical) */
+.weekdays {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--cell-size) * 7 + var(--cell-gap) * 6);
+  color: var(--muted);
+  font-size: 12px;
+  min-width: 38px;
+}
+
+/* Scroll wrapper: grid + months scroll together horizontally */
+.heat-scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Grid (columns of weeks) */
+.heat-grid {
+  display: flex;
+  gap: var(--cell-gap);
+  padding: 6px 6px 4px 6px;
+  align-items: flex-start;
+}
+
+/* One column (a week): stack 7 cells */
+.heat-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cell-gap);
+}
+
+/* Each cell */
+.heat-cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-radius: 2px;
+  background: #2f2f2f;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.35);
+}
+
+/* Months row: one label per week */
+.heat-months {
+  margin-top: 12px;
+  display: flex;
+  gap: var(--cell-gap);
+  padding: 0 60px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+.month-label {
+  width: calc(var(--cell-size) + var(--cell-gap));
+  text-align: left;
+}
+
+/* Helpers */
+.leetcode-loading,
+.leetcode-error {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+/* ------------------------------
+   Responsive
+--------------------------------*/
+@media (max-width: 900px) {
+  .leetcode-top-row { flex-direction: column; }
+  .badges-card { min-width: unset; }
+}
