@@ -29,6 +29,22 @@ const SOCIALS = [
     color: "linear-gradient(72.44deg, #ff7a00 11.92%, #ff0169 51.56%, #d300c5 85.69%)",
   },
   {
+  name: "LinkedIn",
+  url: "https://www.linkedin.com/in/priyanshu-kesharwani-57a525255/",
+  svg: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      height="1.5em"
+      width="1.5em"
+      fill="currentColor"
+    >
+      <path d="M100.28 448H7.4V148.9h92.88zM53.64 107.37A53.64 53.64 0 1 1 53.64 0a53.64 53.64 0 0 1 0 107.37zM447.9 448h-92.68V302.4c0-34.7-12.41-58.4-43.55-58.4-23.73 0-37.85 16-44.1 31.4-2.27 5.5-2.84 13.2-2.84 21V448h-92.7V148.9h92.7v40.8c12.3-19 34.25-46.2 83.3-46.2 60.8 0 106.5 39.8 106.5 125.3V448z"/>
+    </svg>
+  ),
+    color: "#e5e5e5ff",
+  },
+  {
     name: "Facebook",
     url: "https://www.facebook.com/priyanshu.kesharwani.566/",
     svg: (
