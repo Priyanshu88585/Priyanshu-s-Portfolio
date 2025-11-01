@@ -33,17 +33,42 @@ export const SERVICES = [
   {
     id: "fullstack-dev",
     title: "Full Stack Development",
-    desc: "Scalable MERN applications with smooth UI/UX, authentication, and optimized workflows.",
+    desc: "Build end-to-end web applications using the MERN stack — from responsive frontends to secure, high-performance backends.",
   },
   {
     id: "frontend-dev",
     title: "Frontend Development",
-    desc: "Responsive websites with React.js, Vanilla JS, and modern UI/UX practices.",
+    desc: "Design and develop modern, responsive, and user-friendly interfaces using React.js, Tailwind CSS, and JavaScript.",
   },
   {
     id: "backend-dev",
     title: "Backend Development",
-    desc: "Robust backend with Node.js, Express.js, and MongoDB ensuring scalability and security.",
+    desc: "Create reliable and scalable server-side applications using Node.js, Express.js, and MongoDB with efficient REST APIs.",
+  },
+  {
+    id: "api-integration",
+    title: "API Development & Integration",
+    desc: "Develop RESTful APIs and integrate third-party services such as payment gateways, cloud storage, and AI models.",
+  },
+  {
+    id: "ui-ux",
+    title: "UI/UX Optimization",
+    desc: "Improve user experience with modern design principles, intuitive navigation, and component-driven architecture.",
+  },
+  {
+    id: "deployment-devops",
+    title: "Deployment & DevOps",
+    desc: "Deploy applications seamlessly on cloud platforms like Vercel, Render, and AWS with CI/CD integration.",
+  },
+  {
+    id: "ai-integration",
+    title: "AI Integration",
+    desc: "Integrate AI tools like OpenAI APIs, LangChain, and Gemini into MERN apps for smart, automated user experiences.",
+  },
+  {
+    id: "project-consulting",
+    title: "Project Consultation",
+    desc: "Provide guidance on software architecture, best practices, and scalable MERN development strategies.",
   },
 ];
 
@@ -125,33 +150,93 @@ export const SKILLS = [
 // ---------------- CERTIFICATIONS ----------------
 export const CERTIFICATIONS = [
   {
-    title: "Google Project Management Certification",
-    issuer: "Google",
-    year: "2024",
+    title: "45 Days Coding Challenge - By Coding Thinker",
+    issuer: "Coding Thinker",
+    year: "Oct 2025",
     link: "#",
   },
   {
-    title: "Digital Strategy Certification",
-    issuer: "IBM",
-    year: "2024",
-    link: "#",
-  },
-  {
-    title: "Software Engineering Virtual Experience",
+    title: "Goldman Sachs - Internal Audit Job Simulation",
     issuer: "Goldman Sachs",
-    year: "2024",
+    year: "Aug 2025",
     link: "#",
   },
   {
-    title: "Software Engineering Virtual Internship",
-    issuer: "JP Morgan Chase & Co.",
-    year: "2024",
+    title: "J.P. Morgan - Quantitative Research Job Simulation",
+    issuer: "J.P. Morgan",
+    year: "Aug 2025",
     link: "#",
   },
   {
-    title: "Software Engineering Job Simulation",
-    issuer: "Walmart Global Tech",
-    year: "2024",
+    title: "LetsUpgrade - Placement Prep Bootcamp by GitHub & LinkedIn",
+    issuer: "LetsUpgrade",
+    year: "Aug 2025",
+    link: "#",
+  },
+  {
+    title: "AWS - Solutions Architecture Job Simulation",
+    issuer: "Amazon Web Services (AWS)",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "Accenture Nordics - Software Engineering Job Simulation",
+    issuer: "Accenture Nordics",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "Deloitte Australia - Data Analytics Job Simulation",
+    issuer: "Deloitte",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "Electronic Arts - Software Engineering Job Simulation",
+    issuer: "Electronic Arts (EA)",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "Tata - Data Visualisation: Empowering Business with Effective Insights Job Simulation",
+    issuer: "Tata Group",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "Walmart USA - Pharmacy Technician Job Simulation",
+    issuer: "Walmart",
+    year: "Jul 2025",
+    link: "#",
+  },
+  {
+    title: "GE Aerospace - Explore Engineering Job Simulation",
+    issuer: "GE Aerospace",
+    year: "Mar 2025",
+    link: "#",
+  },
+  {
+    title: "Generative AI: The Evolution of Thoughtful Online Search",
+    issuer: "LinkedIn",
+    year: "Sep 2024",
+    link: "#",
+  },
+  {
+    title: "Introduction to Data Analytics",
+    issuer: "Simplilearn",
+    year: "Sep 2025",
+    link: "#",
+  },
+  {
+    title: "LetsUpgrade - Spotify Clone using React",
+    issuer: "LetsUpgrade",
+    year: "Aug 2025",
+    link: "#",
+  },
+  {
+    title: "React Bootcamp",
+    issuer: "LetsUpgrade",
+    year: "Aug 2025",
     link: "#",
   },
 ];
