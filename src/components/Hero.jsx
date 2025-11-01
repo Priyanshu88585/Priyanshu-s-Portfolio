@@ -61,14 +61,35 @@ const Hero = () => {
         <div style={{ marginTop: 16 }}>
           <Typing texts={["Fullstack Developer", "Data Structure & Algorithm", "React Developer", "N8N Automation"]} />
         </div>
+
+        {/* Resume Button */}
+        <motion.a
+          href="/Priyanshu's Resume 2022-26.pdf"
+          download="Priyanshu_Kesharwani_Resume.pdf"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="resume-btn"
+          style={{
+            display: "inline-block",
+            marginTop: "1.5rem",
+            padding: "10px 20px",
+            borderRadius: "8px",
+            background: "var(--accent)",
+            color: "#fff",
+            fontWeight: "600",
+            textDecoration: "none",
+            transition: "background 0.3s",
+          }}
+        >
+          📄 Resume
+        </motion.a>
       </div>
 
-      {/* Right Side (Profile Image instead of Canvas) */}
+      {/* Right Side (Profile Image) */}
       <div className="hero-right">
         <div className="profile-photo-wrap card">
           <img
-            src= "https://media.licdn.com/dms/image/v2/D5603AQHwEr2IAwFKjA/profile-displayphoto-scale_400_400/B56ZjLcG9WHUAg-/0/1755759802549?e=1762992000&v=beta&t=NB3FKe0hudOI70nuJr54nDyI4FuDTgVCSX-G9t5HFjw"
-            alt="Profile"
+            src= "https://media.licdn.com/dms/image/v2/D5603AQHwEr2IAwFKjA/profile-displayphoto-scale_400_400/B56ZjLcG9WHUAg-/0/1755759802549?e=1762992000&v=beta&t=NB3FKe0hudOI70nuJr54nDyI4FuDTgVCSX-G9t5HFjw"            alt="Profile"
             className="profile-photo"
           />
         </div>
