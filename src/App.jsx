@@ -16,6 +16,7 @@ import Profile from "./components/Profile";
 import Links from "./components/Links";
 import Services from "./components/Services";
 import Certifications from "./components/Certifications";
+import GithubProfile from "./components/GithubProfile";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -81,6 +82,7 @@ function App() {
                 <Testimonials />
                 <Certifications />
                 <LeetCode />
+                <GithubProfile username="Priyanshu88585" repoCount={30} />
                 <Contact />
               </>
             }
