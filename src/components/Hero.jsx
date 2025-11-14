@@ -89,7 +89,7 @@ const Hero = () => {
       <div className="hero-right">
         <div className="profile-photo-wrap card">
           <img
-            src= "https://media.licdn.com/dms/image/v2/D4D03AQEFOmUsQYUVCw/profile-displayphoto-scale_400_400/B4DZpiMoIcHwAg-/0/1762584074631?e=1764201600&v=beta&t=OXy1UFrMMED0TtUqchlujK2XD4ersIgAS1LkwDW3rNk"            alt="Profile"
+            src= "https://media.licdn.com/dms/image/v2/D4D03AQFOpJ2U_nYmBg/profile-displayphoto-scale_400_400/B4DZpsj29PIAAk-/0/1762757933863?e=1764806400&v=beta&t=oQFRq9Kuj96z2ssO_3m4l0VrMrGSIWMt8nLD1iUCotA"            alt="Profile"
             className="profile-photo"
           />
         </div>
