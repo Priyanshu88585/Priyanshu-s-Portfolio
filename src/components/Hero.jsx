@@ -89,7 +89,7 @@ const Hero = () => {
       <div className="hero-right">
         <div className="profile-photo-wrap card">
           <img
-            src= "https://media.licdn.com/dms/image/v2/D4D03AQFOpJ2U_nYmBg/profile-displayphoto-scale_400_400/B4DZpsj29PIAAk-/0/1762757933863?e=1764806400&v=beta&t=oQFRq9Kuj96z2ssO_3m4l0VrMrGSIWMt8nLD1iUCotA"            alt="Profile"
+            src= "https://avatars.githubusercontent.com/u/134344291?v=4"            alt="Profile"
             className="profile-photo"
           />
         </div>
