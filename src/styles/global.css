@@ -10,7 +10,7 @@
   --accent-glow: 0 0 18px rgba(255, 111, 97, 0.7);
   --text: #e6e6e6;
   --glass: rgba(255, 255, 255, 0.04);
-  ccccccccccccc--border:var(--accent)
+  --border:var(--accent)
 }
 
 /* ====================== Global Reset ====================== */
