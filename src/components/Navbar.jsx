@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/components.css";
 import DarkModeToggle from "./DarkModeToggle"; // ⬅️ import toggle
+import logo from "../assets/logo/logo_portfolio.jpg"; // <-- put your 1:1 logo here
 
 const Navbar = () => {
   return (
