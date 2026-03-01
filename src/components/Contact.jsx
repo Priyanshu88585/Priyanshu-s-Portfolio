@@ -40,25 +40,6 @@ const Contact = () => {
           {status === "sent" && <div style={{color:"green", marginTop:8}}>Thanks — message sent!</div>}
           {status === "error" && <div style={{color:"crimson", marginTop:8}}>Error sending. Try again later.</div>}
         </form>
-
-        <div style={{minWidth:260}}>
-          <div className="card" style={{padding:12}}>
-            <div style={{fontWeight:700}}>{PROFILE.name}</div>
-            <div style={{marginTop:8}}>{PROFILE.college} • CGPA {PROFILE.cgpa}</div>
-            <div style={{marginTop:8}}>{PROFILE.location}</div>
-            <div style={{marginTop:12}}>
-              <a href={`mailto:${PROFILE.contactEmail}`}>{PROFILE.contactEmail}</a><br/>
-              <a href={`tel:${PROFILE.phone}`}>{PROFILE.phone}</a>
-            </div>
-
-            <div style={{display:"flex", gap:8, marginTop:12}}>
-              <a href={LINKS.github} target="_blank" rel="noreferrer">GitHub</a>
-              <a href={LINKS.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
-              <a href={LINKS.hackerrank} target="_blank" rel="noreferrer">HackerRank</a>
-              <a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
