@@ -10,6 +10,7 @@
   --accent-glow: 0 0 18px rgba(255, 111, 97, 0.7);
   --text: #e6e6e6;
   --glass: rgba(255, 255, 255, 0.04);
+  ccccccccccccc--border:var(--accent)
 }
 
 /* ====================== Global Reset ====================== */
@@ -37,7 +38,8 @@ body.light {
   --accent: #2563eb;
   --accent-glow: 0 0 18px rgba(37, 99, 235, 0.6);
   --text: #0f172a;
-  --glass: rgba(0, 0, 0, 0.04);
+  --glass: rgba(0, 0, 0, 0.04);c
+  --border:var(--accent)
 }
 
 /* ====================== Containers & Sections ====================== */
