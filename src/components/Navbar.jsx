@@ -2,14 +2,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/components.css";
-import DarkModeToggle from "./DarkModeToggle"; // ⬅️ import toggle
+import DarkModeToggle from "./DarkModeToggle";
 import logo from "../assets/logo/logo_portfolio.jpg"; // <-- put your 1:1 logo here
 
 const Navbar = () => {
   return (
-    <div className="navbar card">
-      {/* Left side: Name & Tag */}
+    <div className="navbar card" style={{ padding: "0.5rem 1rem" }}>
+      {/* Left side: Logo, Name & Tag */}
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+        <img
+          src={logo}
+          alt="logo"
+          style={{
+            width: 40,               // 1:1 square size (adjust as needed)
+            height: 40,
+            objectFit: "cover",
+            border: "1px solid var(--border)", // border color from theme
+            borderRadius: 25,
+            padding: 4,              // inner padding
+            marginRight: 1,          // spacing to the name
+          }}
+        />
         <Link
           to="/profile"
           style={{ fontWeight: 700, textDecoration: "none", color: "var(--text)" }}
@@ -30,11 +43,9 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </div>
 
-        {/* Dark Mode Toggle */}
-<div className="nav-toggle">
-  <DarkModeToggle />
-</div>
-
+        <div className="nav-toggle">
+          <DarkModeToggle />
+        </div>
       </div>
     </div>
   );
