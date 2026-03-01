@@ -38,7 +38,7 @@ body.light {
   --accent: #2563eb;
   --accent-glow: 0 0 18px rgba(37, 99, 235, 0.6);
   --text: #0f172a;
-  --glass: rgba(0, 0, 0, 0.04);c
+  --glass: rgba(0, 0, 0, 0.04);
   --border:var(--accent)
 }
 
