@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { BADGES } from "../utils/data";
 import "../styles/leetcode.css";
 
-const API_URL = "https://leetcode-stats-api.herokuapp.com/OutR5t3bfn";
+const API_URL = "https://leetcode-stats-api.vercel.app/OutR5t3bfn";
 
 /**
  * LeetCode component
@@ -373,3 +373,4 @@ const LeetCode = () => {
 };
 
 export default LeetCode;
+
