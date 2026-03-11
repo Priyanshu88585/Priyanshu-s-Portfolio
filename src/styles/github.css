@@ -99,6 +99,7 @@
   text-align: center;
 }
 .stat-num {
+  padding-top: 30px;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -207,15 +208,26 @@
 }
 
 /* responsive */
+@media (max-width: 1400px) {
+  .repos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1100px) {
   .repos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .stats-card {
-    flex: 0 0 260px;
+    flex: 0 0 320px;
+  }
+  .github-card {
+    min-height: 130px;
+    padding: 12px;
   }
 }
-@media (max-width: 720px) {
+
+@media (max-width: 900px) {
   .github-top-row {
     flex-direction: column;
   }
@@ -224,6 +236,67 @@
   }
   .stats-card {
     width: 100%;
+  }
+  .gh-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .gh-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .github-top-row {
+    gap: 0.75rem;
+  }
+  .github-card {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 12px;
+  }
+  .profile-right {
+    width: 100%;
+  }
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+  .repos-grid {
+    gap: 10px;
+  }
+  .gh-stats {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-card {
+    padding: 10px;
+  }
+  .gh-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .gh-name {
+    font-size: 0.95rem;
+  }
+  .gh-username, .gh-bio {
+    font-size: 0.9rem;
+  }
+  .stats-grid {
+    gap: 8px;
+  }
+  .stat-num {
+    padding-top: 20px;
+    font-size: 1rem;
+  }
+  .lang-list {
+    gap: 6px;
+  }
+  .repos-header {
+    margin-bottom: 8px;
   }
 }
 
