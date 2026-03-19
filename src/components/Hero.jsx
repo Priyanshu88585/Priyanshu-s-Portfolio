@@ -47,8 +47,6 @@ const Typing = ({ texts }) => {
    Small grid squares → vortex ring pattern
 ───────────────────────────────────────────── */
 
-
-
 const PixelCanvas = () => {
   const canvasRef = useRef(null);
 
@@ -116,7 +114,7 @@ const PixelCanvas = () => {
       const CY = H * 0.43;
       const RMAX = Math.min(W, H) * 0.54;
 
-      /* Smooth scroll */
+      /* Smooth scroll (kept, but no speed effect now) */
       scrollY += (targetScroll - scrollY) * 0.08;
 
       /* Smooth mouse */
@@ -138,9 +136,7 @@ const PixelCanvas = () => {
           const angle = Math.atan2(dy, dx);
           const norm = dist / RMAX;
 
-          /* ─────────────────────────────────────────────
-             🔥 Mouse Magnetic Distortion
-          ───────────────────────────────────────────── */
+          /* Mouse Magnetic Distortion */
           const mdx = px - mouseLerp.x;
           const mdy = py - mouseLerp.y;
           const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
@@ -154,59 +150,28 @@ const PixelCanvas = () => {
             py += (mdy / mDist) * force;
           }
 
-          /* ─────────────────────────────────────────────
-             Rings
-          ───────────────────────────────────────────── */
+          /* Rings */
           const ring1 = Math.exp(-Math.pow((norm - 0.52) / 0.21, 2));
-          const ring2 =
-            Math.exp(-Math.pow((norm - 0.72) / 0.18, 2)) * 0.6;
+          const ring2 = Math.exp(-Math.pow((norm - 0.72) / 0.18, 2)) * 0.6;
           const ring = ring1 + ring2;
 
-          /* Waves */
+          /* Waves (scroll removed from time) */
           const ripple =
-            Math.sin(
-              dist * 0.058 -
-                (time + scrollFactor) * 2.5 +
-                angle * 0.45
-            ) *
-              0.5 +
-            0.5;
+            Math.sin(dist * 0.058 - time * 2.5 + angle * 0.45) * 0.5 + 0.5;
 
           const ripple2 =
-            Math.cos(
-              dist * 0.032 -
-                (time + scrollFactor) * 1.2 +
-                angle * 0.25
-            ) *
-              0.3 +
-            0.7;
+            Math.cos(dist * 0.032 - time * 1.2 + angle * 0.25) * 0.3 + 0.7;
 
           /* Swirl */
           const swirl =
-            Math.sin(
-              angle * 4 +
-                norm * 8 -
-                (time + scrollFactor) * 2.1
-            ) *
-              0.35 +
-            0.65;
+            Math.sin(angle * 4 + norm * 8 - time * 2.1) * 0.35 + 0.65;
 
           const swirl2 =
-            Math.cos(
-              angle * 2.5 +
-                norm * 4 +
-                (time + scrollFactor) * 1.8
-            ) *
-              0.25 +
-            0.75;
+            Math.cos(angle * 2.5 + norm * 4 + time * 1.8) * 0.25 + 0.75;
 
           /* Pulse */
           const pulse =
-            Math.sin(
-              (time + scrollFactor) * 3.2 + dist * 0.05
-            ) *
-              0.4 +
-            0.6;
+            Math.sin(time * 3.2 + dist * 0.05) * 0.4 + 0.6;
 
           const n = noise(c, r);
 
@@ -225,11 +190,8 @@ const PixelCanvas = () => {
 
           if (opacity < 0.02) continue;
 
-          /* ─────────────────────────────────────────────
-             🎯 Depth / Parallax illusion
-          ───────────────────────────────────────────── */
-          const depthShift =
-            ((mouseLerp.x - CX) / W) * norm * 20;
+          /* Depth / Parallax illusion */
+          const depthShift = ((mouseLerp.x - CX) / W) * norm * 20;
 
           px += depthShift;
 
@@ -240,9 +202,7 @@ const PixelCanvas = () => {
             Math.sin(c * 3.1 + r * 2.7 + time * 4.2) > 0.4;
 
           const isBright =
-            ring > 0.55 &&
-            ripple2 > 0.6 &&
-            Math.cos(c + r + time * 2) > 0.3;
+            ring > 0.55 && ripple2 > 0.6 && Math.cos(c + r + time * 2) > 0.3;
 
           if (isAccent) {
             ctx.fillStyle = `rgba(255,100,80,${opacity * 0.92})`;
@@ -262,7 +222,8 @@ const PixelCanvas = () => {
         }
       }
 
-      time += 0.016 + scrollFactor * 0.3;
+      /* ✅ Constant speed */
+      time += 0.016;
 
       raf = requestAnimationFrame(draw);
     };
@@ -290,8 +251,6 @@ const PixelCanvas = () => {
     />
   );
 };
-
-
 
 /* ─────────────────────────────────────────────
    Stats Bar
