@@ -40,10 +40,10 @@ class Developer {
     desc: "Built 7+ full-stack projects including a restaurant website, e-commerce platform (Med Store), and an open-source UI elements library (UISEN). Deployed everything on Vercel.",
     code: `// Real-world projects
 const projects = [
-  { name: "Med Store",      stack: ["React","Node","MongoDB"] },
-  { name: "Royal Saffron",  stack: ["HTML","CSS","JS"]        },
-  { name: "UISEN Library",  stack: ["MERN","Tailwind"]        },
-  { name: "Bill Splitter",  stack: ["Vanilla JS"]             },
+  { name: "Med Store"},
+  { name: "Royal Saffron"},
+  { name: "UISEN Library"},
+  { name: "Bill Splitter"},
 ];
 
 // All shipped → vercel.app ✓`,
